@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   template: '<app-catalog></app-catalog><router-outlet></router-outlet>'
 })
 export class AppComponent {
-  title = 'oraculo-de-filmes';
+  title = 'film-hunter';
 }
