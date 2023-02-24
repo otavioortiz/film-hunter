@@ -1,0 +1,34 @@
+.movie-component{
+    border-radius: 5px;
+    background-color: white;
+    width: 12vw;
+    margin: 3px;
+    display: inline-block;
+    text-align: center;
+    border: 1px double black;
+    padding: 3px;
+}
+
+.movie-selected{
+    background-color: yellow;
+}
+
+.movie-name{
+    text-align: center;
+    margin: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ 
+}
+
+.movie-button{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.movie-cover{
+    max-width: 100%; 
+    height: auto; 
+}

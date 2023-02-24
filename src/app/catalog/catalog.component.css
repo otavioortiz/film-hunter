@@ -1,0 +1,18 @@
+.catalog-title{
+    text-align: center;
+}
+
+.catalog-button{
+    display: block;
+    margin: 0 auto;
+}
+
+.result-movies{
+    text-align: center;
+}
+
+.new-search-button{
+    display: block;
+    margin:0 auto;
+    margin-top: 10px;
+}

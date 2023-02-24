@@ -1,0 +1,21 @@
+<ng-container *ngIf="catalogState == 0">
+    <p class="catalog-title">Select 3 movies and click in search</p>
+    <button (click)="selectMovies()" class="catalog-button">Search</button>
+</ng-container>
+
+<ng-container *ngIf="catalogState == 2">
+    <p class="catalog-title">These are the recommended movies for you</p>
+</ng-container>
+
+<ng-container *ngIf="catalogState == 0">
+    <app-movie *ngFor="let movieId of getSelectableMovieIds();" movieId={{movieId}} [selectMode]="true"></app-movie>
+</ng-container>
+
+<ng-container *ngIf="catalogState == 1">
+    Loading Movies...
+</ng-container>
+
+<div  class="result-movies" *ngIf="catalogState == 2">
+    <app-movie *ngFor="let movieId of getSuggestedMovieIds();" movieId={{movieId}} [selectMode]="false"></app-movie>
+    <button (click)="newSearch()" class="new-search-button">New Search</button>
+</div>

@@ -1,0 +1,5 @@
+<div class="movie-component" [ngClass]="{'movie-selected': movieSelected == true }">
+    <p class="movie-name">{{movieName}}</p>
+    <img class="movie-cover" src={{movieCover}} (error)="missingImage()">
+    <button (click)="clickInSelect()" class="movie-button">{{buttonText}}</button>
+</div>
