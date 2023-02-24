@@ -83,8 +83,13 @@ export class MovieService {
       for(let j=301;j<this.moviesDB.length;j++){
 
         let currentContrast:number = generatedChromosomes[i].getContrast(this.moviesDB[j].chromosome);
-        if( currentContrast < lowerContrast[0] )
-          lowerContrast = [currentContrast, this.moviesDB[j]];
+        if( currentContrast < lowerContrast[0] ){
+
+          let foundIds = sugestionMovieIds.find(element => element == this.moviesDB[j].movieId);
+          if(foundIds == null || foundIds.length == 0)
+            lowerContrast = [currentContrast, this.moviesDB[j]];
+        }
+          
       }
 
       sugestionMovieIds.push(lowerContrast[1].movieId);

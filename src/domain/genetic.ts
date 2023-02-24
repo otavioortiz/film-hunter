@@ -29,8 +29,8 @@ export class GeneticManager{
         for(let i=0;i<ancestors.length;i++){
             for(let j=0;j<ancestors.length;j++)
                 if(i != j){
-                    descendants.push( new Chromosome([...ancestors[i].genes.slice(0, 3), ...ancestors[j].genes.slice(3)]) );
-                    descendants.push( new Chromosome([...ancestors[j].genes.slice(0, 3), ...ancestors[i].genes.slice(3)]) );
+                    descendants.push( new Chromosome([...ancestors[i].genes.slice(0, 11), ...ancestors[j].genes.slice(11)]) );
+                    descendants.push( new Chromosome([...ancestors[j].genes.slice(0, 11), ...ancestors[i].genes.slice(11)]) );
                 }
         }
             
@@ -54,7 +54,7 @@ export class GeneticManager{
 
             let currentGenes:Array<number> = new Array<number>();
             for(let j=0;j<chromosomes[i].genes.length;j++){
-                if(Math.random() > 0.8)
+                if(Math.random() > 0.88)
                     currentGenes.push(Math.random());
                 else
                     currentGenes.push(chromosomes[i].genes[j]);
